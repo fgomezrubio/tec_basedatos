@@ -1,3 +1,4 @@
+-- First Git
 DROP DATABASE IF EXISTS Normalizacion;
 CREATE DATABASE Normalizacion;
 DROP TABLE IF EXISTS Normalizacion.Table1;
