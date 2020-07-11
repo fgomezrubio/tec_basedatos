@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS Normalizacion3FN;
 CREATE DATABASE Normalizacion3FN;
+
 DROP TABLE IF EXISTS Normalizacion3FN.Table1;
 CREATE TABLE Normalizacion3FN.`Table1` (
   `Sucursal` int(11) NOT NULL,
@@ -71,6 +72,8 @@ insert into Normalizacion3FN.`Table4` (`CodigoCliente`, `NombreCliente`) values
   (01,'ALVAREZ'),
   (107,'CASTRO'),
   (110,'LIZ');
+
+ALTER TABLE Normalizacion3FN.`Table1`  ADD CONSTRAINT `table4toT1_fk` FOREIGN KEY (`CodigoCliente`) REFERENCES Normalizacion3FN.`Table4` (`CodigoCliente`);
   
 Select * from Normalizacion3FN.`Table4` ;
 -- test
