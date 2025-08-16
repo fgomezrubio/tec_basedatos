@@ -1,10 +1,9 @@
 -- First Git
 DROP DATABASE IF EXISTS Normalizacion;
 CREATE DATABASE Normalizacion;
-DROP TABLE IF EXISTS Normalizacion.Table1;
-CREATE TABLE Normalizacion.`Table1` (
+DROP TABLE IF EXISTS Normalizacion.Tabla;
+CREATE TABLE Normalizacion.`Tabla` (
  `Suc-Factura` VARCHAR(11) NOT NULL,
-  `Factura` int(11) NOT NULL,
   `Fecha` date NOT NULL,
   `FormaPago` varchar(2) Not Null,
   `CodigoCliente` int(3) NOT NULL,
@@ -14,9 +13,7 @@ CREATE TABLE Normalizacion.`Table1` (
   `CantidadArticulo` int(2) NOT NULL,
   `PrecioArticulo` float(11,2) NOT NULL,
   `SubTotal` float(11,0) NOT NULL,
-  
-  `TotalFactura` float(11,0) NOT NULL -- ,
-  -- PRIMARY KEY (`Sucursal`,`Factura`)
+  `TotalFactura` float(11,0) NOT NULL 
   ) ;
   
  INSERT INTO tabla (`Suc-Factura`,	Fecha,	FormaPago,	CodigoCliente,	NombreCliente,	CodigoArticulo,	NombreArticulo,	CantidadArticulo,	PrecioArticulo,	SubTotal,	TotalFactura)
@@ -27,4 +24,4 @@ values
   ('01-501','2006-01-02','CC',107,'CASTRO',08,'COMPAS',4,4,16,16),
   ('02-500','2006-01-03','E',110,'LIZ',20,'REGLA',2,2.45,4.9,14.9),
   ('02-500','2006-01-03','E',110,'LIZ',10,'HOJAS',2,5.0,10,14.9);
-  Select * from Normalizacion.`Table1` ;
+  Select * from Normalizacion.`Tabla` ;
